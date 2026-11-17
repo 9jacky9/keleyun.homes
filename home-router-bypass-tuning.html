@@ -1,98 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>家里网速慢先别怪机场：路由器、DNS 与光猫的自查清单 - 可乐云·居畅享视界</title>
-  <meta name="description" content="网页慢、视频卡，不一定是加速服务的问题。从光猫与路由器状态、DNS 设置、无线频段和宽带套餐几个方面，列出家庭网络的自查清单。">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>家庭旁路网关怎么验收分流：先看地址、默认网关与解析，再测试单台设备</title>
+<meta content="用网络角色图、Windows只读信息与单设备测试检查分流路径，保留家庭原接入并避免地址冲突和全屋同时改动。" name="description"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- 可乐气泡全景浮动背景应用 (Full-Page Floating Cola Bubbles Atmosphere) -->
-  <div class="cola-bubble-atmosphere" aria-hidden="true">
-    <span class="bubble b1"></span>
-    <span class="bubble b2"></span>
-    <span class="bubble b3"></span>
-    <span class="bubble b4"></span>
-    <span class="bubble b5"></span>
-    <span class="bubble b6"></span>
-    <span class="bubble b7"></span>
-    <span class="bubble b8"></span>
-    <span class="bubble b9"></span>
-    <span class="bubble b10"></span>
-    <span class="bubble b11"></span>
-    <span class="bubble b12"></span>
-    <span class="bubble b13"></span>
-    <span class="bubble b14"></span>
-    <span class="bubble b15"></span>
-    <span class="bubble b16"></span>
-    <span class="bubble b17"></span>
-    <span class="bubble b18"></span>
-    <span class="bubble b19"></span>
-    <span class="bubble b20"></span>
-  </div>
-
-
-  <nav class="nav-island">
-    <div class="nav-island-inner">
-      <a href="index.html" class="brand-stream">
-        <svg width="32" height="32" viewBox="0 0 44 44" fill="none">
-          <rect width="44" height="44" rx="22" fill="#eff6ff"/>
-          <ellipse cx="22" cy="18" rx="10" ry="7" stroke="#e11d48" stroke-width="2.5"/>
-          <circle cx="22" cy="18" r="3" fill="#2563eb"/>
-        </svg>
-        <span class="brand-name">可乐云 <span>· 居</span></span>
-      </a>
-      <div class="nav-island-action">
-        <a href="journal.html" class="nav-stream-item">畅享视界</a>
-        <a href="https://ww012.twilightaff.com/#/?code=A56DH1Af" target="_blank" rel="nofollow" class="btn-nav-capsule">客户端登录</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="stream-reader-wrap">
-    <a href="journal.html" class="journal-read-btn" style="margin-bottom: 24px; display: inline-flex;">&larr; 返回周刊目录</a>
-
-    <header class="stream-post-head">
-      <div class="stream-post-meta">
-        <span>发布日期：2026-11-13</span>
-        <span>专栏：网络排查</span>
-        <span>阅读时长：约 6 分钟</span>
-      </div>
-      <h1 class="stream-post-title">家里网速慢先别怪机场：路由器、DNS 与光猫的自查清单</h1>
-      <p class="stream-post-intro">
+<!-- 可乐气泡全景浮动背景应用 (Full-Page Floating Cola Bubbles Atmosphere) -->
+<div aria-hidden="true" class="cola-bubble-atmosphere">
+<span class="bubble b1"></span>
+<span class="bubble b2"></span>
+<span class="bubble b3"></span>
+<span class="bubble b4"></span>
+<span class="bubble b5"></span>
+<span class="bubble b6"></span>
+<span class="bubble b7"></span>
+<span class="bubble b8"></span>
+<span class="bubble b9"></span>
+<span class="bubble b10"></span>
+<span class="bubble b11"></span>
+<span class="bubble b12"></span>
+<span class="bubble b13"></span>
+<span class="bubble b14"></span>
+<span class="bubble b15"></span>
+<span class="bubble b16"></span>
+<span class="bubble b17"></span>
+<span class="bubble b18"></span>
+<span class="bubble b19"></span>
+<span class="bubble b20"></span>
+</div>
+<nav class="nav-island">
+<div class="nav-island-inner">
+<a class="brand-stream" href="index.html">
+<svg fill="none" height="32" viewbox="0 0 44 44" width="32">
+<rect fill="#eff6ff" height="44" rx="22" width="44"></rect>
+<ellipse cx="22" cy="18" rx="10" ry="7" stroke="#e11d48" stroke-width="2.5"></ellipse>
+<circle cx="22" cy="18" fill="#2563eb" r="3"></circle>
+</svg>
+<span class="brand-name">可乐云 <span>· 居</span></span>
+</a>
+<div class="nav-island-action">
+<a class="nav-stream-item" href="journal.html">畅享视界</a>
+<a class="btn-nav-capsule" href="https://ww012.twilightaff.com/#/?code=A56DH1Af" rel="nofollow" target="_blank">客户端登录</a>
+</div>
+</div>
+</nav>
+<main class="stream-reader-wrap">
+<a class="journal-read-btn" href="journal.html" style="margin-bottom: 24px; display: inline-flex;">← 返回周刊目录</a>
+<header class="stream-post-head">
+<div class="stream-post-meta">
+<span>发布日期：2026-11-13</span>
+<span>专栏：网络排查</span>
+<span>阅读时长：约 6 分钟</span>
+</div>
+<h1 class="stream-post-title">家庭旁路网关怎么验收分流：先看地址、默认网关与解析，再测试单台设备</h1>
+<p class="stream-post-intro">
         很多人一遇到网速慢，就想换节点、换服务。其实不少问题出在家里的光猫、路由器和设置上，先自查一遍能省不少力气。
       </p>
-    </header>
-
-    <div class="stream-post-body">
-<h2>一、先不开加速测一次</h2>
-<p>关闭加速服务，直接访问国内网站和测速。如果这时已经很慢，说明问题出在宽带本身或路由器，与加速服务无关。</p>
-<h2>二、重启与散热</h2>
-<p>光猫和路由器长时间运行后，性能会下降。断电重启一次，并保持设备通风良好，经常能立刻改善。</p>
-<h2>三、DNS 设置</h2>
-<p>运营商默认 DNS 有时较慢。可以在路由器或电脑上改用较稳定的公共 DNS，再观察网页打开速度。</p>
-<h2>四、无线频段与信道</h2>
-<p>5GHz 频段速度更快、干扰更少，但穿墙能力较弱；2.4GHz 覆盖广，但容易被邻居的信号干扰。可以尝试手动更换信道，避开拥挤的那一个。</p>
-<h2>五、检查宽带套餐与连接设备</h2>
-<ul><li>确认套餐速率是否满足全家使用。</li><li>看看是否有设备在后台大量下载。</li><li>老旧的路由器不一定能发挥全部带宽。</li></ul>
-<h2>小结</h2>
-<p>家庭网络先自查，再考虑线路问题。这个顺序能让排查更有效率。</p>
+</header>
+<div class="stream-post-body"><div data-swc-article-body="2026-11-16"><h2>旁路网关不是插上就自动接管全家</h2><p>设备接入家庭网络后，是否承载某台电脑的流量，取决于实际网关、路由和应用配置。名字叫旁路由，不代表所有请求都经过它。开始之前先画清光猫、主路由、旁路设备和终端的连接关系，知道每台设备负责什么。不要把网上某个地址照搬到自己家，地址冲突会让原本正常的网络也出问题。</p><h2>第一步确认谁提供地址与默认路径</h2><p>在Windows电脑运行ipconfig，查看当前使用适配器的地址、子网掩码和默认网关；需要更完整信息时按系统说明查看相应输出。记录有线与无线分别是什么状态，不把断开的旧适配器当成当前路径。地址与网关信息属于网络配置线索，不是最终分流成功的证明，但可以帮助发现电脑根本没有使用预期入口。</p><h2>第二步把DNS与默认网关分开记录</h2><p>DNS负责名称解析，默认网关参与转发到其他网络，两者可以由同一设备提供，也可能不同。只改DNS并不等于所有流量已经走旁路设备，只改网关也不能保证解析遵循预期方式。记录实际值与设置来源，弄清是自动获得还是手工指定。避免把不同教程里的网关与解析地址拼成互相不匹配的组合。</p><h2>测试前准备可恢复的原配置</h2><p>保存主路由与旁路设备的现有设置，并写下电脑恢复原自动配置或原地址的方法。保留能够进入管理页面的设备，安排在家人没有重要任务时操作。不要一开始就修改全屋地址分配服务，也不要同时重置两台设备。先让一台测试终端验证，能够恢复原接入，才适合继续扩大范围。</p><h2>第三步核对旁路设备自身是否可用</h2><p>按所用系统的官方说明确认其管理地址、上游路径与必要服务状态，用设备提供的只读诊断查看连接。电脑能打开管理界面，只说明局域网可达，不代表设备能正确访问外部服务。检查必要的时间、解析和配置来源，不把某个状态灯当作全部条件通过。遇到报错先保存原文，再按层次处理。</p><h2>第四步只让测试终端使用新路径</h2><p>依现有架构与设备文档，为指定测试终端配置预期路径，其他设备暂时沿用原状态。随后重新读取地址与网关信息，并用公开页面、局域网打印或文件访问等小任务验证。外网正常而本地设备失联，也属于需要修复的结果，不能只看一个网站打开就宣布分流完成。测试内容应覆盖日常真正需要的方向。</p><h2>查看路由信息时不急着添加永久规则</h2><p>Windows的route print可以显示路由表与接口信息，帮助理解系统当前会如何选择路径。初学者应先读取并与网络图核对，不随意加入长期静态路由。多个默认路径、虚拟接口或其他客户端可能影响选择，具体行为需要结合优先级和实际配置。看不懂的条目先保留，由有经验的人解释，不用清空路由来试运气。</p><h2>分流规则必须能对应具体任务</h2><p>把需要保持原路径与需要使用额外路径的应用或目标分别列出，说明理由和验证方式。规则匹配顺序、域名解析与应用独立设置可能影响结果，应按实际客户端文档核对。不能只把国内与国外作为两个模糊标签就认为一切正确，云服务的不同资源也可能分布在不同位置，需要以应用任务结果验证。</p><h2>连接订阅与网关转发是两层条件</h2><p>比较<a href="https://dajichang.mom/">旁路网关机场配置比较</a>中的候选时，确认服务格式、客户端与设备性能是否匹配。订阅成功不意味着家庭路由已正确，网关可转发也不意味着所有节点可用。分别验证配置导入、连接建立和目标任务，避免把任何一层失败都处理成重新购买套餐。凭据不应复制到公开配置示例里。</p><h2>检查负载与异常恢复</h2><p>让测试终端进行适量正常传输，观察旁路设备资源和交互表现，再正常断开恢复一次。处理能力不足可能在多设备使用时显现，单页浏览成功不足以代表全部并发场景。不要为求峰值同时开启大量不理解的加速功能。记录已经验证的设备数与任务，扩大使用时逐步增加，发现异常就回到上一组可解释状态。</p><h2>扩大到家庭使用前复查本地功能</h2><p>确认打印机、投屏、文件共享和重要应用仍按预期工作，家人知道如何恢复基本接入。任何地址分配或全局设置改变，都应按设备文档和实际结构谨慎安排。完成后更新网络图与配置记录，避免几个月后忘记谁负责解析、谁负责转发。家庭网络越清楚，后续更换宽带或设备就越容易。</p><h2>保留一条不依赖复杂设置的恢复路线</h2><p>如果旁路设备维护或故障，测试终端应能按原记录回到已知可用接入。恢复后用原来的基本任务验证，不仅检查能否打开管理页面。分流的价值是让不同任务采用合适路径，而不是制造无法解释的多层转发。一个能够被复查和恢复的小范围方案，比一次改完全家却不知道如何撤回更适合长期使用。</p></div></div>
+</main>
+<footer class="fluid-dock">
+<div class="dock-links">
+<a href="sitemap.html">网站地图</a>
+<a href="about.html">关于我们</a>
+<a href="terms.html">服务条款</a>
+<a href="privacy.html">隐私政策</a>
+</div>
+<div class="dock-copy">
+      © 2026 可乐云·居 Keleyun Homes. All Rights Reserved. 智慧家庭灵动加速网络。
     </div>
-  </main>
-
-  <footer class="fluid-dock">
-    <div class="dock-links">
-      <a href="sitemap.html">网站地图</a>
-      <a href="about.html">关于我们</a>
-      <a href="terms.html">服务条款</a>
-      <a href="privacy.html">隐私政策</a>
-    </div>
-    <div class="dock-copy">
-      &copy; 2026 可乐云·居 Keleyun Homes. All Rights Reserved. 智慧家庭灵动加速网络。
-    </div>
-  </footer>
-
+</footer>
 </body>
 </html>

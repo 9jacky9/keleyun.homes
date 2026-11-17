@@ -3,51 +3,51 @@
   <!-- 网站首页 -->
   <url>
     <loc>https://keleyun.homes/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- 畅享视界周刊总览 -->
   <url>
     <loc>https://keleyun.homes/journal.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 深度生活与技术文章 (6篇) -->
   <url>
     <loc>https://keleyun.homes/smart-family-network-setup.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://keleyun.homes/living-room-appletv-streaming.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://keleyun.homes/study-abroad-remote-learning.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://keleyun.homes/home-router-bypass-tuning.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://keleyun.homes/digital-nomad-remote-sync.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://keleyun.homes/wifi-signal-dead-zones-solution.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -72,7 +72,7 @@
   </url>
   <url>
     <loc>https://keleyun.homes/sitemap.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
