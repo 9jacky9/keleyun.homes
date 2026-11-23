@@ -49,6 +49,7 @@
   }
   </script>
 <link href="style.css" rel="stylesheet"/>
+<style id="maintenance-anchor-offset">#pricing{scroll-margin-top:180px;}</style>
 </head>
 <body>
 <!-- 可乐气泡全景浮动背景应用 (Full-Page Floating Cola Bubbles Atmosphere) -->
@@ -125,7 +126,7 @@
 </svg>
 </a>
 <!-- 查看套餐资费 (严格为 dofollow，绝不添加 nofollow，且包含 target="_blank") -->
-<a class="btn-flow-dofollow" href="#plans" target="_blank">
+<a class="btn-flow-dofollow" href="#pricing">
           查看套餐资费
           <svg fill="none" height="16" viewbox="0 0 20 20" width="16">
 <path d="M5 15L15 5M15 5H8M15 5V12" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -569,5 +570,23 @@
       © 2026 可乐云·居 Keleyun Homes. All Rights Reserved. 智慧家庭灵动加速网络。
     </div>
 </footer>
+<script id="maintenance-anchor-offset-script">
+(() => {
+  const targets = ["pricing"];
+  const headers = [...document.querySelectorAll('header,nav,[class*="nav"],[class*="header"]')];
+  const update = () => {
+    const height = Math.max(0, ...headers.map(el => {
+      const box = el.getBoundingClientRect();
+      const position = getComputedStyle(el).position;
+      return ['fixed','sticky'].includes(position) && box.width > innerWidth / 2 && box.height < 400 ? box.height : 0;
+    }));
+    targets.forEach(id => { const el = document.getElementById(id); if (el) el.style.scrollMarginTop = Math.ceil(height + 16) + 'px'; });
+  };
+  update();
+  addEventListener('resize', update, {passive: true});
+  if ('ResizeObserver' in window) { const observer = new ResizeObserver(update); headers.forEach(el => observer.observe(el)); }
+  if (document.fonts) document.fonts.ready.then(update);
+})();
+</script>
 </body>
 </html>
